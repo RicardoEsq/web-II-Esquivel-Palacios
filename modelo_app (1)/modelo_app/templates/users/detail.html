@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+
+    <link rel="stylesheet" href="{% static 'css/user_detail.css' %}">
+</head>
+
+<body>
+    <h1>Editar Usuario</h1>
+
+    <form method="POST" action="{% url 'userDetail' user.id %}">
+        {% csrf_token %}
+        
+        <label>Nombre:</label>
+        <input type="text" name="name" value="{{ user.name }}" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ user.email }}" required><br>
+
+        <label>RFC:</label>
+        <input type="text" name="rfc" value="{{ user.rfc }}" required><br>
+
+        <button type="submit">Actualizar</button>
+    </form>
+
+    <script src="{% static 'js/user_detail.js' %}"></script>
+
+</body>
+
+</html>

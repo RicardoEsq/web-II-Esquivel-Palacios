@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido a la aplicación</h1>
+    <nav>
+        <a href="{% url 'listUsers' %}">Usuarios</a>
+        <a href="{% url 'orders:indexOrders' %}">Órdenes</a>
+    </nav>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/menu.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/orders.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<h1>{{ titulo }}</h1>
+
+<p>Total de órdenes: {{ total_orders }}</p>
+<p>Total de pagos: {{ total_payments }}</p>
+
+<h2>Lista de Órdenes</h2>
+<div class="orders-container">
+    {% for order in orders %}
+    <div class="order-card">
+        <img src="{{ order.image }}" alt="{{ order.name }}" width="100">
+        <p><strong>Nombre:</strong> {{ order.name }}</p>
+        <p><strong>Edad:</strong> {{ order.age }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/orders.js' %}"></script>
+{% endblock %}
