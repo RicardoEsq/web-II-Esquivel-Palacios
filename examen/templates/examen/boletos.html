@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Boletos</title>
+</head>
+<body>
+    <h1>Boletos Disponibles</h1>
+    <ul>
+        {% for boleto in boletos %}
+            <li>Boleto para: {{ boleto.evento.name }} - Precio: ${{ boleto.precio }} - Fecha: {{ boleto.fecha }}</li>
+        {% empty %}
+            <li>No hay boletos disponibles.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
