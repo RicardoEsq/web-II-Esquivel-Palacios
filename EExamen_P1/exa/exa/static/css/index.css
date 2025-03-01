@@ -1,0 +1,67 @@
+body {
+    background-color: #222;
+    color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+nav a {
+    color: #f1a661;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+h1 {
+    text-align: center;
+    color: #ff5733;
+}
+
+/* Ajuste del tamaño de la imagen principal */
+.main-image {
+    width: 50%;  /* Reduce el tamaño al 50% del contenedor */
+    max-height: 300px; /* Altura máxima */
+    display: block;
+    margin: 20px auto; /* Centra la imagen */
+    border-radius: 10px;
+    object-fit: cover; /* Evita distorsión */
+}
+
+.card {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(255, 165, 0, 0.5);
+}
+
+button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c70039;
+}
+
+.gallery, .news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre las cajas */
+    padding: 20px;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+}
+
+.gallery img, .news img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+}
